@@ -1,0 +1,69 @@
+import datetime 	
+def assistente_virtuale(comando):
+ 	if comando == "Qual è la data di oggi?":   
+		 oggi = datetime.datetoday()   
+ 		risposta = "La data di oggi è " + oggi.strftime("%d/%m/%Y")  
+ 	elif comando == "Che ore sono?":        ora_attuale = datetime.datetime.now().time()          
+		risposta = "L'ora attuale è " + ora_attuale.strftime("%H%M")    
+		elif comando == "Come ti chiami?":        
+		risposta = "Mi chiamo Assistente Virtuale"    
+	else:        risposta = "Non ho capito la tua domanda."      
+	return risposta 
+
+while True    
+	comando_utente = input("Cosa vuoi sapere? ")    
+	if comando_utente.lower() == "esci":        
+	print("Arrivederci!")
+break
+	else:
+print(assistente_virtuale(comando_utente)
+
+
+Gli errori erano solo due
+Ho corretto il . nella riga a: datetime.datetime.today()
+E poi i : dopo il while, il codice corretto e commentato è:
+
+import datetime  # Importa la libreria standard per gestire l'orario
+
+def assistente_virtuale(comando):    #Funzione che gestisce diversi comandi e restituisce una risposta basata sul comando.
+ 
+    if comando == "Qual è la data di oggi?":  # Controlla se il comando riguarda la data
+        oggi = datetime.date.today()  # Ottiene solo la data attuale
+        risposta = "La data di oggi è " + oggi.strftime("%d/%m/%Y")  # Formatta la data
+    elif comando == "Che ore sono?":  # Chiede se il comando riguarda l'ora
+        ora_attuale = datetime.datetime.now().time()  # Ottiene l'ora attuale
+        risposta = "L'ora attuale è " + ora_attuale.strftime("%H:%M")  # Formatta l'ora
+    elif comando == "Come ti chiami?":  # Controlla se il comando chiede il nome
+        risposta = "Mi chiamo Assistente Virtuale"  # Risposta fissa
+    else:  # Gestisce i comandi non riconosciuti
+        risposta = "Non ho capito la tua domanda."
+    return risposta  # Restituisce la risposta generata
+
+
+while True:	# Ciclo per ricevere input dall'utente
+    comando_utente = input("Cosa vuoi sapere? ")  # Chiede il comando all'utente
+    if comando_utente.lower() == "esci":  # Controlla se l'utente vuole uscire
+        print("Arrivederci!")  # Stampa un messaggio di saluto
+        break  # Esce dal ciclo 
+    else:  # Per tutti gli altri comandi
+        print(assistente_virtuale(comando_utente))  # Stampa la risposta generata
+
+
+Questo programma agisce come un assistente virtuale che risponde a comandi dell'utente tramite una funzione. I comandi che riconosce sono:
+-"Qual è la data di oggi?": restituisce la data corrente in formato gg/mm/aaaa.
+-"Che ore sono?": restituisce l'ora attuale in formato hh:mm.
+-"Come ti chiami?": risponde con "Mi chiamo Assistente Virtuale".
+Qualsiasi altro comando genera la risposta: "Non ho capito la tua domanda." E sottolineo anche quando la frase è giusta e uno dei termini in minuscolo è riportato in Maiuscolo e viceversa.
+In fine se l'utente digita "esci", il programma termina con il messaggio "Arrivederci!".
+
+Casistiche non standard non gestite
+Input non valido o vuoto:
+Se l'utente lascia il comando vuoto ("") o inserisce spazi, il programma risponde con "Non ho capito la tua domanda" senza avvisare che l'input non è valido.
+Comandi con variazioni di maiuscole/minuscole:
+Il programma è case-sensitive. Ad esempio, "qual è la data di oggi?" non sarà riconosciuto.
+Come errori di sintassi:
+Correggere elif comando() == "Che ore sono?" in elif comando == "Che ore sono?":
+Aggiungere poi if comando.lower() == "qual è la data di oggi?": in ogni parte del codice che contiene "comando" per permettere al programma di accettare la frase del comando non badando alle Maiuscole.
+In fine aggiungere un messaggio che ricordi all'utente che può uscire digitando "esci":
+print("Puoi digitare 'esci' in qualsiasi momento per terminare il programma.")
+
