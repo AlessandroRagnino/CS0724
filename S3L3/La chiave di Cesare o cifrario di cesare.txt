@@ -1,0 +1,22 @@
+La chiave di Cesare, o cifrario di Cesare, è un metodo di cifratura molto semplice e antico. Funziona sostituendo ogni lettera del messaggio originale con una lettera spostata di un numero fisso (la "chiave") lungo l'alfabeto.
+
+Ho provato tornando indietro di 3 lettere tenendo conto dell'alfabeto e partendo dalla lettera H, quindi avendo 
+1-A	16-P
+2-B 	17-Q
+3-C 	18-R
+4-D 	19-S
+5-E 	20-T
+6-F 	21-U
+7-G 	22-V
+8-H -	23-W
+9-I	24-X
+10-J	25-Y
+11-K 	26-Z
+12-L 
+13-M 
+14-N 
+15-O; 
+Dovendo cifrare il messaggio: "HSNFRGH" ho provato a cifrare usando come chiave di spostamento 1 lettera in avanti rispetto a H, cioè la I che è la prima vocale:
+quindi usando come chiave di spostamento 1 lettera in avanti il messaggio viene:
+ITOGSHI, poi invece ho provato con la chiave di spostamento di 3 lettere indietro per l'altra vocale più vicina, la E. H è la numero 8 e la E è la lettera numero 5, quindi sono tre lettere indietro. Utilizzata questa chiave abbiamo decifrato "HSNFRGH" in:
+EPICODE!
