@@ -11,7 +11,7 @@ def calcola_perimetro():
     if scelta == '1':
         lato = float(input("Inserisci la lunghezza del lato del quadrato: "))
         perimetro = 4 * lato
-        print(f"Il perimetro del quadrato è: {perimetro}")
+        print(f"Il perimetro del quadrato è: {perimetro: .0f}")
     
     elif scelta == '2':
         raggio = float(input("Inserisci il raggio del cerchio: "))
