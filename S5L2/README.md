@@ -111,12 +111,3 @@ Le scansioni hanno individuato **due host attivi** sulla rete `192.168.50.0/24`:
 2. **Windows XP**: Sistema non più supportato e potenzialmente vulnerabile, con servizi SMB e NetBIOS che potrebbero essere sfruttati.
 
 ---
-
-### 📁 **Pubblicazione su GitHub**
-Ti consiglio di creare un repository con la seguente struttura:  
-```
-/
-├── README.md  # Include il file sopra
-├── scansioni/ # Una directory per eventuali file di output o log
-└── screenshots/ # Per includere eventuali screenshot delle scansioni
-```
