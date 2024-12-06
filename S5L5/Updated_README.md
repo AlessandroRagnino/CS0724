@@ -53,11 +53,6 @@ Servizio Clienti
 2. La banca non chiede mai di confermare le credenziali tramite email.
 3. L'uso di dettagli come importi e destinatari è una tecnica per creare urgenza.
 
-## 📂 Contenuti del Repository
-- `phishing_email.md` - Email di phishing simulata.  
-- `README.md` - Questo file.  
-- **Logo Placeholder:**  
-  ![Logo Placeholder](https://via.placeholder.com/150?text=Banca+Sanpaolo)
 
 ## 🚀 Obiettivo Didattico
 Questo esercizio è pensato per imparare a riconoscere i segnali di un’email di phishing e migliorare la consapevolezza sulla sicurezza online.
