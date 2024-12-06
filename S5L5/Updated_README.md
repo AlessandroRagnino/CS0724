@@ -38,7 +38,7 @@ Grazie per la collaborazione,
 Servizio Clienti  
 **Banca Sanpaolo**  
 
-*Nota:* Non rispondere a questa email. Per assistenza, contattaci al numero **800-XXX-XXX**.  
+*Nota:* Non rispondere a questa email. Per assistenza, contattaci al numero **800 303 303**.  
 
 ---
 
