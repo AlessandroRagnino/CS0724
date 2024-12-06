@@ -18,7 +18,7 @@ Raccogliere credenziali bancarie e altre informazioni sensibili tramite un link 
 ### Corpo dell’email:
 ---
 
-Gentile [Nome Cognome],  
+Gentile Giuseppe Verdi,  
 
 Abbiamo rilevato **due transazioni non autorizzate** sul tuo conto corrente effettuate il **06 dicembre 2024**. Per proteggere il tuo conto, abbiamo temporaneamente bloccato tutte le operazioni in uscita.  
 
