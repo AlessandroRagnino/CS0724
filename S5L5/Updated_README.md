@@ -30,7 +30,7 @@ Se riconosci queste transazioni, puoi ignorare questa email. In caso contrario, 
 
 **Conferma la tua identità cliccando sul link qui sotto:**  
 
-👉 [Verifica il tuo conto ora](http://secure-login-banca-clienti.com/verifica)  
+👉 [Verifica il tuo conto ora](https://xaosparqwb.eu.loclx.io)  
 
 Ti ricordiamo che, per la tua sicurezza, tutte le operazioni sul conto saranno bloccate fino a completamento della verifica.  
 
