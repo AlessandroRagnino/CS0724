@@ -1,9 +1,4 @@
 
-# Simulazione di un'Email di Phishing - Banca Sanpaolo
-
-## 📄 Descrizione
-Questo progetto contiene un esempio realistico di un'email di phishing creata come esercitazione per il corso di cybersecurity. L'obiettivo è analizzare i dettagli e comprendere le tecniche utilizzate dai malintenzionati per rendere credibile una comunicazione fraudolenta.  
-
 ## 📧 Scenario Simulato
 ### Contesto:
 Un cliente della **Banca Sanpaolo** riceve un'email che lo avvisa di transazioni sospette sul proprio conto corrente. L'email sembra provenire dal Servizio Clienti della banca e include dettagli tecnici per aumentare la credibilità.  
@@ -18,7 +13,7 @@ Raccogliere credenziali bancarie e altre informazioni sensibili tramite un link 
 ### Corpo dell’email:
 ---
 
-Gentile Giuseppe Verdi,  
+Gentile cliente,  
 
 Abbiamo rilevato **due transazioni non autorizzate** sul tuo conto corrente effettuate il **06 dicembre 2024**. Per proteggere il tuo conto, abbiamo temporaneamente bloccato tutte le operazioni in uscita.  
 
@@ -43,7 +38,7 @@ Servizio Clienti
 ---
 
 ## 📌 Elementi da Analizzare
-- **URL fraudolento:** `http://secure-login-banca-clienti.com/verifica`  
+- **URL fraudolento:** `https://xaosparqwb.eu.loclx.io`  
 - **Pressione temporale:** Richiesta di azione immediata.  
 - **Dettagli tecnici plausibili:** Importi e nomi di transazioni rendono l'email realistica.  
 - **Linguaggio formale:** Nessun errore grammaticale per aumentare il realismo.  
