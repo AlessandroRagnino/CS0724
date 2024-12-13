@@ -22,7 +22,7 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
    ```
    Password configurata: `testpass`.
 
-![adduser](./adduser.png) 
+   ![adduser](./adduser.png)
 
 2. Attivazione del servizio SSH:
    ```bash
@@ -34,7 +34,9 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
    ssh test_users@192.168.50.100
    ```
    La connessione al servizio SSH è stata verificata con successo.
-![testusers](./testusers.png) 
+
+   ![testusers](./testusers.png)
+
 #### **Creazione delle Liste**
 - Lista di username (`username.txt`):
   ```
@@ -72,7 +74,9 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
   securepass
   password123
   ```
-![echoe](./echoe.png) 
+
+   ![echoe](./echoe.png)
+
 #### **Comando per Creare Liste**
 - Creazione della lista di password utilizzando il comando:
   ```bash
@@ -86,8 +90,7 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
 
 - Creazione della lista di username utilizzando il comando:
   ```bash
-echo -e "test_user\nadmin\nroot\nuser1\nguest\noperator\nsupport\nmanager\ndeveloper\nservice\nbackup\ntester\naccount\nsuperuser\nsysadmin" > username.txt
-
+  echo -e "test_user\nadmin\nroot\nuser1\nguest\noperator\nsupport\nmanager\ndeveloper\nservice\nbackup\ntester\naccount\nsuperuser\nsysadmin" > username.txt
   ```
   **Spiegazione del comando:**
   - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
@@ -114,11 +117,14 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
   Username: test_users
   Password: testpass
   ```
-![risultato](./risultato1.png) 
-![risultato](./risultat1.png)
+
+   ![risultato](./risultato1.png)
+   ![risultato](./risultat1.png)
 
 ### **2. Attacco di Dizionario su FTP**
-![ftpadduser](./adduserftp.png)
+
+   ![ftpadduser](./adduserftp.png)
+
 #### **Configurazione del Servizio FTP**
 1. Installazione del servizio FTP:
    ```bash
@@ -158,7 +164,9 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
   - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
   - `>`: Reindirizza l'output al file `ftp_passwords.txt`.
   - Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
-![echoeftp](./echoeftp.png)
+
+   ![echoeftp](./echoeftp.png)
+
 #### **Attacco con Hydra**
 Comando utilizzato:
 ```bash
@@ -178,7 +186,9 @@ hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
   Username: ftp_user
   Password: ftp_pass
   ```
-![finale](./finale.png)
+
+   ![finale](./finale.png)
+
 ---
 
 ## **Conclusioni**
@@ -194,4 +204,3 @@ hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
 ---
 
 **Nota:** Le simulazioni sono state effettuate in un ambiente di laboratorio controllato per scopi educativi e non devono essere utilizzate per scopi non etici.
-
