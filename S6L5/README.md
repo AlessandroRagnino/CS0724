@@ -1,10 +1,10 @@
-# Relazione sull'Attacco di Dizionario con Hydra su SSH e FTP
+# Relazione sull'Attacco di Dizionario con Hydra su SSH e FTP 🚀
 
 Questa relazione documenta le fasi principali del lavoro svolto per simulare un attacco di dizionario su due diversi servizi di rete (SSH e FTP) utilizzando lo strumento Hydra.
 
 ---
 
-## **Obiettivi**
+## **Obiettivi** 🛠️
 1. Configurare i servizi SSH e FTP su un ambiente Kali Linux.
 2. Creare liste di username e password per simulare un attacco a dizionario.
 3. Utilizzare Hydra per eseguire attacchi di brute force contro i servizi configurati.
@@ -12,9 +12,9 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
 
 ---
 
-## **Fasi dell'Esercizio**
+## **Fasi dell'Esercizio** 🧪
 
-### **1. Attacco di Dizionario su SSH**
+### **1. Attacco di Dizionario su SSH** 🔒
 #### **Configurazione del Servizio SSH**
 1. Creazione di un nuovo utente per il test:
    ```bash
@@ -33,11 +33,11 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
    ```bash
    ssh test_users@192.168.50.100
    ```
-   La connessione al servizio SSH è stata verificata con successo.
+   ✅ La connessione al servizio SSH è stata verificata con successo.
 
    ![testusers](./testusers.png)
 
-#### **Creazione delle Liste**
+#### **Creazione delle Liste** 📂
 - Lista di username (`username.txt`):
   ```
   test_users
@@ -77,7 +77,7 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
 
    ![echoe](./echoe.png)
 
-#### **Comando per Creare Liste**
+#### **Comando per Creare Liste** 📋
 - Creazione della lista di password utilizzando il comando:
   ```bash
   echo -e "password\n123456\nadmin123\ntestpass\nqwerty\nletmein\npassword1\nwelcome\n12345678\nchangeme\nroot123\ntoor\niloveyou\nsecurepass\npassword123" > password.txt
@@ -86,7 +86,7 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
   - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
   - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
   - `>`: Reindirizza l'output al file `password.txt`.
-  - Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
+  - 📁 Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
 
 - Creazione della lista di username utilizzando il comando:
   ```bash
@@ -96,9 +96,9 @@ Questa relazione documenta le fasi principali del lavoro svolto per simulare un 
   - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
   - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
   - `>`: Reindirizza l'output al file `username.txt`.
-  - Questo comando genera un file di testo contenente l'username da utilizzare nell'attacco a dizionario.
+  - 📁 Questo comando genera un file di testo contenente l'username da utilizzare nell'attacco a dizionario.
 
-#### **Attacco con Hydra**
+#### **Attacco con Hydra** ⚡
 Comando utilizzato:
 ```bash
 hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
@@ -111,7 +111,7 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
 - `-V`: Mostra i tentativi effettuati in tempo reale.
 - `ssh`: Specifica il servizio da attaccare.
 
-**Risultati:**
+**Risultati:** 🏆
 - Hydra ha trovato le credenziali valide:
   ```
   Username: test_users
@@ -121,7 +121,7 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
    ![risultato](./risultato1.png)
    ![risultato](./risultat1.png)
 
-### **2. Attacco di Dizionario su FTP**
+### **2. Attacco di Dizionario su FTP** 📡
 
    ![ftpadduser](./adduserftp.png)
 
@@ -144,7 +144,7 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
 
 4. Modifica del file di configurazione FTP (`/etc/vsftpd.conf`) per garantire che l'utente possa accedere.
 
-#### **Creazione delle Liste**
+#### **Creazione delle Liste** 📂
 - Creazione della lista di username:
   ```bash
   echo -e "ftp_user\nadmin\nroot\nguest\nuser1" > ftp_usernames.txt
@@ -153,7 +153,7 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
   - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
   - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
   - `>`: Reindirizza l'output al file `ftp_usernames.txt`.
-  - Questo comando genera un file di testo contenente i nomi utente da utilizzare nell'attacco a dizionario.
+  - 📁 Questo comando genera un file di testo contenente i nomi utente da utilizzare nell'attacco a dizionario.
 
 - Creazione della lista di password:
   ```bash
@@ -163,11 +163,11 @@ hydra -L username.txt -P password.txt 192.168.50.100 -t 2 -V ssh
   - `echo -e`: Permette di interpretare i caratteri speciali come `\n` per andare a capo.
   - Ogni stringa separata da `\n` rappresenta una nuova riga nel file.
   - `>`: Reindirizza l'output al file `ftp_passwords.txt`.
-  - Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
+  - 📁 Questo comando genera un file di testo contenente le password da utilizzare nell'attacco a dizionario.
 
    ![echoeftp](./echoeftp.png)
 
-#### **Attacco con Hydra**
+#### **Attacco con Hydra** ⚡
 Comando utilizzato:
 ```bash
 hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
@@ -180,7 +180,7 @@ hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
 - `-V`: Mostra in tempo reale i tentativi effettuati.
 - `ftp`: Specifica il servizio da attaccare.
 
-**Risultati:**
+**Risultati:** 🏆
 - Hydra ha trovato le credenziali valide:
   ```
   Username: ftp_user
@@ -191,15 +191,15 @@ hydra -L ftp_usernames.txt -P ftp_passwords.txt 127.0.0.1 -t 1 -V ftp
 
 ---
 
-## **Conclusioni**
+## **Conclusioni** 📜
 1. **Efficienza di Hydra:** Lo strumento ha dimostrato di essere efficace nell'identificare credenziali valide in un ambiente controllato.
 2. **Importanza delle credenziali sicure:** L'uso di username e password deboli facilita gli attacchi a dizionario e brute force. Per prevenire tali attacchi:
-   - Utilizzare password complesse.
-   - Configurare limiti sui tentativi di accesso.
-   - Implementare misure di blocco IP dopo tentativi falliti.
+   - 🔒 Utilizzare password complesse.
+   - 🔐 Configurare limiti sui tentativi di accesso.
+   - 🚫 Implementare misure di blocco IP dopo tentativi falliti.
 3. **Lezioni apprese:**
-   - La configurazione corretta dei servizi è fondamentale per la sicurezza.
-   - L'uso di strumenti come Hydra aiuta a comprendere le vulnerabilità dei sistemi di autenticazione.
+   - 🛡️ La configurazione corretta dei servizi è fondamentale per la sicurezza.
+   - ⚙️ L'uso di strumenti come Hydra aiuta a comprendere le vulnerabilità dei sistemi di autenticazione.
 
 ---
 
