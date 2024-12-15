@@ -32,6 +32,9 @@ sudo nmap -sn 192.168.1.0/24
 Eseguita una scansione dettagliata con **Nmap**:
 ```bash
 sudo nmap -sS -sV -O 192.168.1.63
+![sudonmap](./sudonmap.png) 
+![sudonmap](./sudonmapportespecifiche.png) 
+
 ```
 ### **Risultati**:
 | 🔗 Porta | ⚡ Servizio | 🔎 Versione            |
@@ -54,6 +57,7 @@ sudo nmap -sS -sV -O 192.168.1.63
    - `/robots.txt`
    - `/backup_wordpress/`
 
+
 3. **Nikto Scan**:
    ```bash
    nikto -h http://192.168.1.63
@@ -62,8 +66,10 @@ sudo nmap -sS -sV -O 192.168.1.63
    - **Apache 2.2.22 obsoleto**
    - Directory e file esposti (`robots.txt`, `/backup_wordpress/`).
 
+![niktio](./niktio.png) 
 ---
-
+![gobuster](./gobuster.png)
+![backupwordpress](./backupwordpress.png) 
 ## 🌐 **4. Accesso FTP (Porta 21)**
 
 Accesso anonimo abilitato:
@@ -86,12 +92,13 @@ mai
 anne
 doomguy
 ```
-
+![getuserstxt](./getuserstxt.png) 
 ---
 
 ## 🛡️ **5. Tentativi di Exploit e WordPress Login**
-
-1. **Accesso WordPress** con credenziali dell'utente `john` fallito.
+![john](./john.png) 
+![login](./login.png) 
+1. **Accesso WordPress** con credenziali dell'utente `john`
 2. Tentativo di caricare una **reverse shell** tramite plugin fallito.
 
 3. **Scansione OpenSSH**:
@@ -99,22 +106,22 @@ doomguy
    searchsploit openssh 5.9
    ```
    Nessun exploit diretto per RCE, ma tool utili per enumerazione utenti.
-
----
+![searchexploit](./searchexploit.png)
+ ---
 
 ## 🛡️ **6. Brute-Force SSH con Hydra**
-
+![rockyou](./rockyou.png)
 Sfruttando il file `users.txt.bk` e il dizionario `rockyou.txt`, abbiamo effettuato un attacco brute-force:
 ```bash
 hydra -l anne -P /usr/share/wordlists/rockyou.txt -t 64 -V ssh://192.168.1.63
 ```
-
+![hydrafinal](./hydrafinal.png)
 ### **Risultato**:
 - 🔑 **Username**: `anne`
 - 🔐 **Password**: `princess`
 
 ---
-
+![princes](./princes.png)
 ## 🔧 **7. Accesso SSH e Privilege Escalation**
 
 1. Connessione SSH con le credenziali trovate:
@@ -137,7 +144,7 @@ Accesso **root** completato. Verifica effettuata con:
 whoami
 id
 ```
-
+![rootfinale](./rootfinale.png)
 ---
 
 ## ⚙️ **Conclusioni**
@@ -157,8 +164,4 @@ Il test è stato completato con successo grazie a:
 4. **Proteggere file di backup** come `users.txt.bk`.
 
 ---
-
-### 📚 **Author**
-**Team Name / Your Name**
-
-🌐 **Progetto pubblicato su GitHub** per scopo didattico e formativo. Se hai domande o suggerimenti, non esitare a contribuire!
+![exploitmetasploit](./exploitmetasploit.png)
