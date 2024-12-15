@@ -76,8 +76,7 @@ Accesso anonimo abilitato:
 ```bash
 ftp 192.168.1.63
 Username: anonymous
-Password: <blank>
-```
+Password: <vuoto>```
 
 ### **File trovato**:
 - **users.txt.bk**
