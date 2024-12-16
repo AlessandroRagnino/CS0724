@@ -87,7 +87,13 @@ hacking_test  test_metasploit
 1. **Avvio dell'Exploit**: Ottenimento della shell root.
 2. **Creazione della Cartella**: Verifica della presenza di `test_metasploit`.
 
-(Si consiglia di inserire qui gli screenshot catturati durante l'esecuzione dell'attività.)
+![Screen1](./Screen1.png) 
+![Screen2](./Screen22.png) 
+![Screen3](./Screenshot23.png)
+![Screen4](./Screenshot24.png) 
+![Screen5](./Screenshot25.png) 
+![Screen6](./Screenshot26.png)
+
 
 ---
 
@@ -127,15 +133,3 @@ L'esercizio ha dimostrato come una versione obsoleta e vulnerabile di un servizi
 
 ---
 
-## ✍️ Autore
-- **Nome**: *(Il tuo Nome)*
-- **Corso**: Cybersecurity - Primo Mese
-- **Data**: *(Data di completamento)*
-- **Strumento Utilizzato**: Metasploit, Nmap
-
----
-
-## ⚠️ Note
-Questa attività è stata eseguita in un **ambiente controllato e autorizzato**. L'uso non autorizzato di queste tecniche su sistemi reali è illegale e contrario all'etica professionale.
-
----
