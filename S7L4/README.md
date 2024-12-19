@@ -34,7 +34,7 @@ nmap -p 8000 192.168.1.153
 ```
 
 **📸 Screenshot:**  
-_![nmap](./NMap close.png)_
+![nmap](./NMapclose.png)
 
 ---
 
