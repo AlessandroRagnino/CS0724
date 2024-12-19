@@ -34,7 +34,7 @@ nmap -p 8000 192.168.1.153
 ```
 
 **📸 Screenshot:**  
-_(Inserire screenshot della scansione nmap che mostra la porta chiusa)_
+_![nmap](./NMap close.png)_
 
 ---
 
