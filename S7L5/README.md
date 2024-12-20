@@ -146,21 +146,27 @@ search -f *.log
 ### 🖼️ Screenshot 1: Configurazione dell'Exploit
 - Mostra la configurazione del modulo di exploit di Metasploit.
 - Parametri come `RHOSTS`, `RPORT`, `LHOST`, `LPORT` e `HTTPDELAY` sono stati configurati correttamente.
-
+![Screen1](./SCROIN1.png) 
 ### 🖼️ Screenshot 2: Configurazione di Rete e Tabella di Routing
 - Conferma l'esecuzione dei comandi `ifconfig` e `route`.
 - Le evidenze raccolte includono la configurazione di rete e la tabella di routing.
-
+![Screen2](./SCROIN2.png) 
+![Screen3](./SCROIN3.png) 
 ### 🖼️ Screenshot 3: Download dei File
 - Dimostra il recupero dei file `network_config.txt` e `routing_table.txt`.
-
+![Screen4](./SCROIN4.png)
+![Screen5](./SCROIN11.png)  
 ### 🖼️ Screenshot 4: Informazioni sul Sistema e Processi
 - Mostra i dettagli del sistema operativo e dei processi attivi.
 - Identifica servizi critici come Apache2 e MySQL.
-
+![Screen6(./SCROIN5.png) 
+![Screen7](./SCROIN6.png) 
 ### 🖼️ Screenshot 5: Ricerca di File Sensibili
 - Conferma la ricerca e il ritrovamento di file di configurazione e di log.
-
+![Screen8](./SCROIN7.png) 
+![Screen9](./SCROIN8.png) 
+![Screen10](./SCROIN9.png) 
+![Screen11](./SCROIN10.png) 
 ---
 
 ## ✅ Conclusioni
