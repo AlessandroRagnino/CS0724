@@ -93,10 +93,3 @@ Questo progetto documenta il processo di sfruttamento di una vulnerabilità **SQ
 4. Limitare i privilegi del database per ridurre l'impatto di eventuali attacchi.
 
 ---
-
-## Disclaimer
-Questo progetto è stato condotto in un ambiente di laboratorio controllato a scopo educativo. Non tentare di sfruttare vulnerabilità su sistemi che non possiedi o per i quali non hai ottenuto esplicita autorizzazione.
-
----
-
-✨ **Grazie per aver letto!** 🚀
