@@ -93,40 +93,108 @@ Simulare il furto di cookie di sessione sfruttando vulnerabilità XSS.
 
 ## Giorno 3: Simulazione di Segmentation Fault in C
 
-### Obiettivo
-Comprendere gli errori di memoria attraverso l'uso di segmentation fault.
+🛠 TRACCIA GIORNO 3: Programma in C
+📜 Triggerare un Segmentation Fault: Spiegazione e Logica 💻
+In questo progetto, abbiamo esplorato come forzare un segmentation fault in un programma C, partendo da un programma originale funzionale. Abbiamo aggiunto modifiche per simulare errori critici e comprenderne le cause.
 
-### Programma Originale
-1. Inserire 10 numeri interi in un array.
-2. Ordinare i numeri in ordine crescente.
-3. Visualizzare i numeri ordinati.
+💻 Il programma originale
+Il programma originale in linguaggio C permette di eseguire queste operazioni:
 
-### Modifiche per il Segmentation Fault
-- Accesso a puntatore nullo:
-  ```c
-  int *ptr = NULL;
-  printf("Valore in *ptr: %d
-", *ptr);
-  ```
-- Accesso a memoria non allocata:
-  ```c
-  ptr = (int *)0xDEADBEEF;
-  printf("Valore in *ptr: %d
-", *ptr);
-  ```
+1️⃣ Inserire 10 numeri interi:
+L'utente inserisce 10 numeri che vengono salvati in un array chiamato vector.
 
-### Risultati Attesi
-- Modalità corretta: numeri ordinati correttamente.
-- Modalità con errore: `Segmentation fault (core dumped)`.
+2️⃣ Visualizzare i numeri inseriti:
+Dopo l'inserimento, il programma mostra i numeri forniti dall'utente.
 
----
+3️⃣ Ordinare i numeri:
+I numeri vengono ordinati in ordine crescente con un algoritmo chiamato Bubble Sort.
 
-## Conclusioni
-Questa guida evidenzia l'importanza di implementare misure di sicurezza per proteggere le applicazioni da vulnerabilità come SQL Injection e XSS, oltre a migliorare la comprensione degli errori di memoria nei programmi C.
+4️⃣ Visualizzare i numeri ordinati:
+Alla fine, il programma mostra i numeri in ordine crescente.
 
----
+📝 Come funziona?
+🛠️ Crea uno spazio (array) per 10 numeri.
+🎤 Chiede all'utente di inserire 10 numeri.
+👀 Mostra i numeri inseriti.
+🔄 Li ordina dal più piccolo al più grande.
+✅ Mostra i numeri ordinati.
+Esempio di risultato originale:
 
-# Cybersecurity Training: Exploit and Vulnerability Analysis
+Inserire 10 numeri interi:
+[1]: 5
+[2]: 3
+[3]: 7
+[4]: 9
+[5]: 2
+[6]: 8
+[7]: 4
+[8]: 1
+[9]: 6
+[10]: 10
+
+Il vettore inserito è:
+[1]: 5
+[2]: 3
+[3]: 7
+...
+
+Il vettore ordinato è:
+[1]: 1
+[2]: 2
+[3]: 3
+...
+✨ Modifiche apportate al programma
+Abbiamo aggiunto una nuova modalità al programma per simulare errori:
+
+1️⃣ Modalità classica
+Il programma funziona come descritto sopra: inserisci 10 numeri, li ordina e li mostra.
+
+2️⃣ Modalità con errore simulato
+La modalità con errore provoca intenzionalmente un segmentation fault accedendo a memoria non valida. Questa modifica serve a comprendere meglio come si verificano gli errori di accesso alla memoria.
+
+Come abbiamo simulato il segmentation fault?
+Accesso a un puntatore nullo:
+Un puntatore nullo (NULL) è stato dereferenziato, generando un segmentation fault:
+
+int *ptr = NULL;
+printf("Valore in *ptr: %d\n", *ptr);
+Accesso a memoria non allocata:
+Modificando un puntatore per puntare a un indirizzo arbitrario:
+
+ptr = (int *)0xDEADBEEF;
+printf("Valore in *ptr: %d\n", *ptr);
+Questi scenari garantiscono che il programma termini con un segmentation fault.
+
+🧪 Risultati attesi
+Modalità classica
+Inserire 10 numeri interi:
+[1]: 1
+[2]: 2
+[3]: 3
+...
+Il vettore inserito è:
+[1]: 1
+[2]: 2
+...
+Il vettore ordinato è:
+[1]: 1
+[2]: 2
+...
+Modalità con errore
+Tentativo di accesso a un puntatore nullo:
+Segmentation fault (core dumped)
+🔑 Logica dietro il segmentation fault
+Il sistema operativo protegge la memoria:
+Solo le aree allocate possono essere utilizzate dal programma.
+
+Accesso non valido:
+Tentare di accedere a memoria non allocata provoca il fault.
+
+Puntatori errati:
+Puntatori non inizializzati o modificati sono una delle cause principali.
+
+⚠️ Conclusioni
+Con queste modifiche, il programma dimostra sia il funzionamento corretto che un errore simulato. Questo progetto aiuta a comprendere meglio i concetti di sicurezza e debugging nei programmi C. 🎯
 
 ## 🛡️ TRACCIA GIORNO 4: Sfruttamento di Vulnerabilità sulla Macchina Metasploitable
 
