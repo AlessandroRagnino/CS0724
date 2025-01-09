@@ -13,7 +13,7 @@ Questa guida spiega passo per passo come completare la CTF sulla macchina Jangow
    ```bash
    ping 192.168.56.118
    ```
-   ![Ping della macchina](./ping_machinetarget.png)
+   ![Ping della macchina](./ping1.png)
 
 2. **Scansionare le porte con Nmap** per identificare i servizi attivi:
    ```bash
