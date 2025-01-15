@@ -167,5 +167,5 @@ L'analisi quantitativa ha permesso di stimare le perdite annuali attese per ogni
 
 ---
 
-**Autore:** [Nome Utente]  
-**Data:** Gennaio 2025
+**Autore:** [Ragnino Alessandro]  
+**Data:** 15/01/2025
