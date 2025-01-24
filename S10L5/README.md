@@ -90,6 +90,42 @@ Familiarizzare con la gestione dei gruppi di utenti in Windows Server 2022, crea
 
 ---
 
+## Configurazione delle Group Policy (GPO) per i Soldiers 🛡️
+### Obiettivo 🎯
+Limitare l'accesso alle applicazioni e funzionalità per il gruppo **Soldiers**, garantendo che abbiano accesso solo a ciò che è necessario per il loro ruolo.
+
+### Configurazione Effettuata 🛠️:
+1. **Bloccare Applicazioni Specifiche:**
+   - **Percorso:** `User Configuration > Administrative Templates > System`
+   - **Policy:** "Don't run specified Windows applications"
+   - **Stato:** Enabled
+   - **Applicazioni Bloccate:**
+     - `cmd.exe`
+     - `powershell.exe`
+     - `regedit.exe`
+     - `taskmgr.exe`
+
+2. **Limitare l’Accesso al Pannello di Controllo:**
+   - **Percorso:** `User Configuration > Administrative Templates > Control Panel`
+   - **Policy:** "Prohibit access to Control Panel and PC settings"
+   - **Stato:** Enabled
+
+3. **Rimuovere l’Accesso al Prompt dei Comandi:**
+   - **Percorso:** `User Configuration > Administrative Templates > System`
+   - **Policy:** "Prevent access to the command prompt"
+   - **Stato:** Enabled
+
+4. **Software Restriction Policies:**
+   - **Percorso:** `Computer Configuration > Windows Settings > Security Settings > Software Restriction Policies`
+   - **Livelli di Sicurezza Configurati:**
+     - **Disallowed:** Vietato eseguire software non autorizzato.
+
+### Risultati:
+- Accesso alle applicazioni limitato con successo per i **Soldiers**.
+- Restrizioni applicate in modo efficace alle aree critiche del sistema.
+
+---
+
 ## Documentazione 📄
 1. **Nomi dei Gruppi Creati:**
    - CommandTeam
@@ -102,6 +138,7 @@ Familiarizzare con la gestione dei gruppi di utenti in Windows Server 2022, crea
    - Configurazione delle cartelle condivise.
    - Assegnazione dei permessi ai gruppi.
    - Creazione degli utenti e assegnazione ai gruppi.
+   - Configurazione e applicazione delle Group Policy.
    - Verifica dei permessi con utenti di prova.
 4. **Problemi Riscontrati:**
    - **Errore nella creazione degli utenti:** Risolto verificando unicità dei nomi.
