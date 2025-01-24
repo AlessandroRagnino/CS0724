@@ -1,4 +1,3 @@
-
 # Creazione e Gestione di Gruppi in Windows Server 2022 🎯
 
 ## Obiettivo 🚀
@@ -78,34 +77,35 @@ Familiarizzare con la gestione dei gruppi di utenti in Windows Server 2022, crea
 ---
 
 ## Verifica dei Permessi ✅
-1. **Accesso con Comandanti Utente:**
-   - Accesso completo a *StrategicPlans* e *Operations*. 🗂️✅
-2. **Accesso con Soldati Utente:**
-   - Accesso in sola lettura a *Operations*. 📜✅
-   - Errore di autorizzazione per *StrategicPlans* (accesso negato). 🚫
+### Test eseguiti:
+1. **Comandanti Utente:**
+   - Verificato accesso completo a *StrategicPlans* e *Operations*. 🗂️✅
+2. **Soldati Utente:**
+   - Verificato accesso in sola lettura a *Operations*. 📜✅
+   - Accesso negato a *StrategicPlans*. 🚫
+
+### Risultati 📊:
+- Gli utenti hanno ottenuto i permessi assegnati in base al gruppo.
+- La configurazione funziona correttamente per entrambi i gruppi.
 
 ---
 
-## Documentazione dei Contenuti 📄
-### Contenuti creati:
-#### StrategicPlans 🗂️
-1. **PianoDifesa2025.docx**: Obiettivi strategici del piano di difesa. ✍️
-2. **OperazioneNotturna.pdf**: Dettagli di un'operazione riservata. 📑
-
-#### Operations 📜
-1. **GuidaEquipaggiamento.pdf**: Equipaggiamento standard. 🎒
-2. **OrdiniDelGiorno.docx**: Pianificazione giornaliera. 🗓️
-3. **PuntiDiRitrovo.xlsx**: Coordinate e orari. 📍
-
----
-
-## Problemi Riscontrati e Soluzioni 🛠️
-1. **Errore nella creazione degli utenti:**
-   - **Problema:** Nomi duplicati o campi mancanti.
-   - **Soluzione:** Verificare l'unicità dei nomi di accesso. ✅
-2. **Errore di rete:**
-   - **Problema:** Utenti senza accesso alle risorse.
-   - **Soluzione:** Controllare i permessi e la connettività di rete. 🔧
+## Documentazione 📄
+1. **Nomi dei Gruppi Creati:**
+   - CommandTeam
+   - Soldiers
+2. **Permessi Assegnati:**
+   - **CommandTeam:** Accesso completo a *StrategicPlans* e *Operations*.
+   - **Soldiers:** Accesso in sola lettura a *Operations*, accesso negato a *StrategicPlans*.
+3. **Passaggi Seguiti:**
+   - Creazione dei gruppi.
+   - Configurazione delle cartelle condivise.
+   - Assegnazione dei permessi ai gruppi.
+   - Creazione degli utenti e assegnazione ai gruppi.
+   - Verifica dei permessi con utenti di prova.
+4. **Problemi Riscontrati:**
+   - **Errore nella creazione degli utenti:** Risolto verificando unicità dei nomi.
+   - **Errore di rete:** Risolto configurando correttamente i permessi.
 
 ---
 
