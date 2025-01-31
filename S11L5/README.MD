@@ -19,8 +19,6 @@ PowerShell è una piattaforma di **automazione e gestione** per sistemi Windows 
 ```powershell
 ping google.com
 ```
-📸 **Screenshot**  
-![Ping Screenshot](./ping_screenshot.png)
 
 ✅ **Visualizzazione file e directory**  
 ```powershell
@@ -54,8 +52,6 @@ netstat -r
 ```powershell
 netstat -abno
 ```
-📸 **Screenshot**  
-![Netstat Active Screenshot](./netstat_active_screenshot.png)
 
 ✅ **Svuotare il Cestino**  
 ```powershell
@@ -125,9 +121,6 @@ nmap -sn 192.168.1.0/24
 ```bash
 nmap -A -T4 scanme.nmap.org
 ```
-📸 **Screenshot**  
-![Nmap Remote Screenshot](./nmap_remote_screenshot.png)
-
 ---
 
 ## 🔥 Wireshark: Analisi di un attacco SQL Injection  
